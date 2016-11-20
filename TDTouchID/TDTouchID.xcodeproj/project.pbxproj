@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DBC98D881DE17CF600CBF7DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC98D871DE17CF600CBF7DE /* main.m */; };
+		DBC98D8B1DE17CF600CBF7DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC98D8A1DE17CF600CBF7DE /* AppDelegate.m */; };
+		DBC98D931DE17CF600CBF7DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC98D921DE17CF600CBF7DE /* Assets.xcassets */; };
+		DBC98D961DE17CF600CBF7DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC98D941DE17CF600CBF7DE /* LaunchScreen.storyboard */; };
+		DBC98DA11DE17D5400CBF7DE /* TDHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC98D9E1DE17D5400CBF7DE /* TDHomeViewController.m */; };
+		DBC98DA21DE17D5400CBF7DE /* TDMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC98DA01DE17D5400CBF7DE /* TDMainViewController.m */; };
+		DBC98DA61DE17D9C00CBF7DE /* TDTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC98DA51DE17D9C00CBF7DE /* TDTouchID.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DBC98D831DE17CF600CBF7DE /* TDTouchID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDTouchID.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC98D871DE17CF600CBF7DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBC98D891DE17CF600CBF7DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DBC98D8A1DE17CF600CBF7DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DBC98D921DE17CF600CBF7DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBC98D951DE17CF600CBF7DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBC98D971DE17CF600CBF7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC98D9D1DE17D5400CBF7DE /* TDHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHomeViewController.h; sourceTree = "<group>"; };
+		DBC98D9E1DE17D5400CBF7DE /* TDHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHomeViewController.m; sourceTree = "<group>"; };
+		DBC98D9F1DE17D5400CBF7DE /* TDMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDMainViewController.h; sourceTree = "<group>"; };
+		DBC98DA01DE17D5400CBF7DE /* TDMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDMainViewController.m; sourceTree = "<group>"; };
+		DBC98DA41DE17D9C00CBF7DE /* TDTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDTouchID.h; sourceTree = "<group>"; };
+		DBC98DA51DE17D9C00CBF7DE /* TDTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDTouchID.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DBC98D801DE17CF600CBF7DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DBC98D7A1DE17CF600CBF7DE = {
+			isa = PBXGroup;
+			children = (
+				DBC98D851DE17CF600CBF7DE /* TDTouchID */,
+				DBC98D841DE17CF600CBF7DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DBC98D841DE17CF600CBF7DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DBC98D831DE17CF600CBF7DE /* TDTouchID.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DBC98D851DE17CF600CBF7DE /* TDTouchID */ = {
+			isa = PBXGroup;
+			children = (
+				DBC98DA31DE17D9C00CBF7DE /* TDTouchID */,
+				DBC98D891DE17CF600CBF7DE /* AppDelegate.h */,
+				DBC98D8A1DE17CF600CBF7DE /* AppDelegate.m */,
+				DBC98D9F1DE17D5400CBF7DE /* TDMainViewController.h */,
+				DBC98DA01DE17D5400CBF7DE /* TDMainViewController.m */,
+				DBC98D9D1DE17D5400CBF7DE /* TDHomeViewController.h */,
+				DBC98D9E1DE17D5400CBF7DE /* TDHomeViewController.m */,
+				DBC98D921DE17CF600CBF7DE /* Assets.xcassets */,
+				DBC98D941DE17CF600CBF7DE /* LaunchScreen.storyboard */,
+				DBC98D971DE17CF600CBF7DE /* Info.plist */,
+				DBC98D861DE17CF600CBF7DE /* Supporting Files */,
+			);
+			path = TDTouchID;
+			sourceTree = "<group>";
+		};
+		DBC98D861DE17CF600CBF7DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DBC98D871DE17CF600CBF7DE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DBC98DA31DE17D9C00CBF7DE /* TDTouchID */ = {
+			isa = PBXGroup;
+			children = (
+				DBC98DA41DE17D9C00CBF7DE /* TDTouchID.h */,
+				DBC98DA51DE17D9C00CBF7DE /* TDTouchID.m */,
+			);
+			path = TDTouchID;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DBC98D821DE17CF600CBF7DE /* TDTouchID */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC98D9A1DE17CF600CBF7DE /* Build configuration list for PBXNativeTarget "TDTouchID" */;
+			buildPhases = (
+				DBC98D7F1DE17CF600CBF7DE /* Sources */,
+				DBC98D801DE17CF600CBF7DE /* Frameworks */,
+				DBC98D811DE17CF600CBF7DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TDTouchID;
+			productName = TDTouchID;
+			productReference = DBC98D831DE17CF600CBF7DE /* TDTouchID.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DBC98D7B1DE17CF600CBF7DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = TuDou;
+				TargetAttributes = {
+					DBC98D821DE17CF600CBF7DE = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5ZZ2TK8JQ9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = DBC98D7E1DE17CF600CBF7DE /* Build configuration list for PBXProject "TDTouchID" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DBC98D7A1DE17CF600CBF7DE;
+			productRefGroup = DBC98D841DE17CF600CBF7DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DBC98D821DE17CF600CBF7DE /* TDTouchID */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DBC98D811DE17CF600CBF7DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC98D961DE17CF600CBF7DE /* LaunchScreen.storyboard in Resources */,
+				DBC98D931DE17CF600CBF7DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DBC98D7F1DE17CF600CBF7DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC98DA61DE17D9C00CBF7DE /* TDTouchID.m in Sources */,
+				DBC98DA11DE17D5400CBF7DE /* TDHomeViewController.m in Sources */,
+				DBC98DA21DE17D5400CBF7DE /* TDMainViewController.m in Sources */,
+				DBC98D8B1DE17CF600CBF7DE /* AppDelegate.m in Sources */,
+				DBC98D881DE17CF600CBF7DE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DBC98D941DE17CF600CBF7DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DBC98D951DE17CF600CBF7DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DBC98D981DE17CF600CBF7DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DBC98D991DE17CF600CBF7DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DBC98D9B1DE17CF600CBF7DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5ZZ2TK8JQ9;
+				INFOPLIST_FILE = TDTouchID/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemonshuo.TDTouchID;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DBC98D9C1DE17CF600CBF7DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5ZZ2TK8JQ9;
+				INFOPLIST_FILE = TDTouchID/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lemonshuo.TDTouchID;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DBC98D7E1DE17CF600CBF7DE /* Build configuration list for PBXProject "TDTouchID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC98D981DE17CF600CBF7DE /* Debug */,
+				DBC98D991DE17CF600CBF7DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBC98D9A1DE17CF600CBF7DE /* Build configuration list for PBXNativeTarget "TDTouchID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC98D9B1DE17CF600CBF7DE /* Debug */,
+				DBC98D9C1DE17CF600CBF7DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DBC98D7B1DE17CF600CBF7DE /* Project object */;
+}
