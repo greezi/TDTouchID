@@ -1,7 +1,7 @@
 # TDTouchID
 
 TDTouchID是一个封装好的指纹验证库,可以用来做iOSAPP的登录/支付等验证。
-
+![(logo)](IMG_3457.PNG)
 #如何使用
 ```
 /**
