@@ -320,6 +320,7 @@
 				DBC98D9C1DE17CF600CBF7DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
