@@ -1,7 +1,12 @@
 # TDTouchID
 
 TDTouchID是一个封装好的指纹验证、人脸验证库,可以用来做iOSAPP的登录/支付等验证。
-![(logo)](IMG_3457.PNG)
+
+#预览
+![(preview)](IMG_3457.PNG)
+
+![(preview-Gif)](FaceID.gif)
+
 
 #安装方式
 使用Cocoa Pods安装
