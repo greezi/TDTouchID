@@ -125,7 +125,7 @@
 				TargetAttributes = {
 					DBC98D821DE17CF600CBF7DE = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 5ZZ2TK8JQ9;
+						DevelopmentTeam = ZJKJV77SHR;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -135,6 +135,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -279,11 +280,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5ZZ2TK8JQ9;
+				DEVELOPMENT_TEAM = ZJKJV77SHR;
 				INFOPLIST_FILE = TDTouchID/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lemonshuo.TDTouchID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tudou.TDTouchID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -292,11 +293,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5ZZ2TK8JQ9;
+				DEVELOPMENT_TEAM = ZJKJV77SHR;
 				INFOPLIST_FILE = TDTouchID/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lemonshuo.TDTouchID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tudou.TDTouchID;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

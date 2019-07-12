@@ -10,80 +10,106 @@
 #import <LocalAuthentication/LocalAuthentication.h>
 
 /**
+ *  设备支持的生物验证方式
+ */
+typedef enum : NSUInteger {
+    /**
+     *  支持TouchID验证
+     */
+    TDTouchIDSupperTypeTouchID = 1,
+    /**
+     *  支持FaceID验证
+     */
+    TDTouchIDSupperTypeFaceID,
+    /**
+     *  不支持支持验证
+     */
+    TDTouchIDSupperTypeNone,
+} TDTouchIDSupperType;
+
+
+/**
  *  TouchID 状态
  */
-typedef NS_ENUM(NSUInteger, TDTouchIDState){
-    
+typedef enum : NSUInteger {
     /**
-     *  当前设备不支持TouchID
+     *  当前设备不支持生物验证
      */
-    TDTouchIDStateNotSupport = 0,
+    TDTouchIDStateNotSupport = 1,
     /**
-     *  TouchID 验证成功
+     *  生物验证 验证成功
      */
-    TDTouchIDStateSuccess = 1,
-    
+    TDTouchIDStateSuccess,
     /**
-     *  TouchID 验证失败
+     *  生物验证 验证失败
      */
-    TDTouchIDStateFail = 2,
+    TDTouchIDStateFail,
     /**
-     *  TouchID 被用户手动取消
+     *  生物验证 被用户手动取消
      */
-    TDTouchIDStateUserCancel = 3,
+    TDTouchIDStateUserCancel,
     /**
-     *  用户不使用TouchID,选择手动输入密码
+     *  用户不使用生物验证,选择手动输入密码
      */
-    TDTouchIDStateInputPassword = 4,
+    TDTouchIDStateInputPassword,
     /**
-     *  TouchID 被系统取消 (如遇到来电,锁屏,按了Home键等)
+     *  生物验证 被系统取消 (如遇到来电,锁屏,按了Home键等)
      */
-    TDTouchIDStateSystemCancel = 5,
+    TDTouchIDStateSystemCancel,
     /**
-     *  TouchID 无法启动,因为用户没有设置密码
+     *  生物验证 无法启动,因为用户没有设置密码
      */
-    TDTouchIDStatePasswordNotSet = 6,
+    TDTouchIDStatePasswordNotSet,
     /**
-     *  TouchID 无法启动,因为用户没有设置TouchID
+     *  生物验证 无法启动,因为用户没有设置生物验证
      */
-    TDTouchIDStateTouchIDNotSet = 7,
+    TDTouchIDStateTouchIDNotSet,
     /**
-     *  TouchID 无效
+     *  生物验证 无效
      */
-    TDTouchIDStateTouchIDNotAvailable = 8,
+    TDTouchIDStateTouchIDNotAvailable,
     /**
-     *  TouchID 被锁定(连续多次验证TouchID失败,系统需要用户手动输入密码)
+     *  生物验证 被锁定(连续多次验证生物验证失败,系统需要用户手动输入密码)
      */
-    TDTouchIDStateTouchIDLockout = 9,
+    TDTouchIDStateTouchIDLockout,
     /**
      *  当前软件被挂起并取消了授权 (如App进入了后台等)
      */
-    TDTouchIDStateAppCancel = 10,
+    TDTouchIDStateAppCancel,
     /**
      *  当前软件被挂起并取消了授权 (LAContext对象无效)
      */
-    TDTouchIDStateInvalidContext = 11,
+    TDTouchIDStateInvalidContext,
     /**
-     *  系统版本不支持TouchID (必须高于iOS 8.0才能使用)
+     *  系统版本不支持生物验证 (必须高于iOS 8.0才能使用)
      */
-    TDTouchIDStateVersionNotSupport = 12
-};
-
-
+    TDTouchIDStateVersionNotSupport,
+} TDTouchIDState;
 
 @interface TDTouchID : LAContext
 
 typedef void (^StateBlock)(TDTouchIDState state,NSError *error);
 
++ (instancetype)sharedInstance;
 
 /**
- 启动TouchID进行验证
+ 启动生物验证
 
  @param desc Touch显示的描述
  @param block 回调状态的block
  */
+- (void)td_showTouchIDWithDescribe:(NSString *)desc BlockState:(StateBlock)block;
 
--(void)td_showTouchIDWithDescribe:(NSString *)desc BlockState:(StateBlock)block;
+/**
+ 启动生物验证
+ @param desc Touch显示的描述
+ @param faceDesc FaceID状态下显示的描述
+ @param block 回调状态的block
+ */
+- (void)td_showTouchIDWithDescribe:(NSString *)desc FaceIDDescribe:(NSString *)faceDesc BlockState:(StateBlock)block;
+
+// 判断设备支持哪种认证方式 TouchID & FaceID
+- (TDTouchIDSupperType)td_canSupperBiometrics;
 
 
 @end

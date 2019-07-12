@@ -19,7 +19,21 @@
     return instance;
 }
 
--(void)td_showTouchIDWithDescribe:(NSString *)desc BlockState:(StateBlock)block{
+- (void)td_showTouchIDWithDescribe:(NSString *)desc FaceIDDescribe:(NSString *)faceDesc BlockState:(StateBlock)block {
+    
+    TDTouchIDSupperType supperType = [self td_canSupperBiometrics];
+    
+    NSString *descStr;
+    if (supperType == TDTouchIDSupperTypeTouchID && desc.length == 0) {
+        descStr = @"通过Home键验证已有指纹";
+    }else{
+        descStr = desc;
+    }
+    if (supperType == TDTouchIDSupperTypeFaceID && faceDesc.length == 0) {
+        descStr = @"通过已有面容ID验证";
+    }else{
+        descStr = faceDesc;
+    }
     
     if (NSFoundationVersionNumber < NSFoundationVersionNumber_iOS_8_0) {
         
@@ -31,15 +45,15 @@
         return;
     }
     
-    LAContext *context = [[LAContext alloc]init];
+    LAContext *context = [[LAContext alloc] init];
     
-    context.localizedFallbackTitle = desc;
+    context.localizedFallbackTitle = @"输入密码验证";
     
     NSError *error = nil;
     
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
         
-        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:desc == nil ? @"通过Home键验证已有指纹":desc reply:^(BOOL success, NSError * _Nullable error) {
+        [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:descStr reply:^(BOOL success, NSError * _Nullable error) {
             
             if (success) {
                 dispatch_async(dispatch_get_main_queue(), ^{
@@ -134,6 +148,25 @@
         
     }
     
+}
+
+- (void)td_showTouchIDWithDescribe:(NSString *)desc BlockState:(StateBlock)block{
+    [self td_showTouchIDWithDescribe:desc FaceIDDescribe:nil BlockState:block];
+}
+
+// 判断设备支持哪种认证方式 TouchID & FaceID
+- (TDTouchIDSupperType)td_canSupperBiometrics {
+    LAContext *context = [[LAContext alloc] init];
+    NSError *error;
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+        if (error != nil) {
+            return TDTouchIDSupperTypeNone;
+        }
+        if (@available(iOS 11.0, *)) {
+            return context.biometryType == LABiometryTypeFaceID ? TDTouchIDSupperTypeFaceID : TDTouchIDSupperTypeTouchID;
+        }
+    }
+    return TDTouchIDSupperTypeNone;
 }
 
 

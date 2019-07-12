@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor greenColor];
-    self.title = @"已经通过TouchID验证";
+    self.title = @"已经通过TouchID/FaceID验证";
     
 }
 
