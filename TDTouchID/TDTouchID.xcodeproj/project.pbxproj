@@ -284,7 +284,7 @@
 				INFOPLIST_FILE = TDTouchID/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tudou.TDTouchID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tudou.TDTouchID.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -297,7 +297,7 @@
 				INFOPLIST_FILE = TDTouchID/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tudou.TDTouchID;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tudou.TDTouchID.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

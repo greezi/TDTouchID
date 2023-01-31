@@ -20,7 +20,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"生物验证";
+    self.title = @"生物验证(TDTouchID)";
     
     UIButton *touchIDButton = [[UIButton alloc] init];
     [touchIDButton addTarget:self action:@selector(touchVerification) forControlEvents:UIControlEventTouchDown];
@@ -55,29 +55,40 @@
  */
 - (void)touchVerification {
     
-    [[TDTouchID sharedInstance] td_showTouchIDWithDescribe:@"通过Home键验证已有指纹" FaceIDDescribe:@"通过已有面容ID验证" BlockState:^(TDTouchIDState state, NSError *error) {
-        if (state == TDTouchIDStateNotSupport) {    //不支持TouchID/FaceID
-            
-            UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"当前设备不支持生物验证" message:@"请输入密码来验证" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-            alertview.alertViewStyle = UIAlertViewStyleSecureTextInput;
-            [alertview show];
-            
-        } else if (state == TDTouchIDStateSuccess) {    //TouchID/FaceID验证成功
-            
-            NSLog(@"jump");
-            TDHomeViewController *homeVc = [[TDHomeViewController alloc] init];
-            [self.navigationController pushViewController:homeVc animated:YES];
-            
-        } else if (state == TDTouchIDStateInputPassword) { //用户选择手动输入密码
-            
-            UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:nil message:@"请输入密码" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-            alertview.alertViewStyle = UIAlertViewStyleSecureTextInput;
-            [alertview show];
-            
-        }
+    // 显示Logs
+    [TDTouchID sharedInstance].disableLogs = NO;
+    
+    // 启动验证
+    [[TDTouchID sharedInstance] td_showTouchIDWithDescribe:@"通过Home键验证已有指纹" FaceIDDescribe:@"通过已有面容ID验证" AuthFallbackTitle:@"输入密码验证" BlockState:^(TDTouchIDState state, NSError *error) {
         
-        // ps:以上的状态处理并没有写完全!
-        // 在使用中你需要根据回调的状态进行处理,需要处理什么就处理什么
+        switch (state) {
+            case TDTouchIDStateNotSupport:  //不支持TouchID/FaceID
+            {
+                UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:@"当前设备不支持生物验证" message:@"请输入密码来验证" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                alertview.alertViewStyle = UIAlertViewStyleSecureTextInput;
+                [alertview show];
+            }
+                break;
+            case TDTouchIDStateSuccess: //TouchID/FaceID验证成功
+            {
+                TDHomeViewController *homeVc = [[TDHomeViewController alloc] init];
+                [self.navigationController pushViewController:homeVc animated:YES];
+            }
+                break;
+            case TDTouchIDStateInputPassword:   //用户选择手动输入密码
+            {
+                UIAlertView *alertview = [[UIAlertView alloc] initWithTitle:nil message:@"请输入密码" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+                alertview.alertViewStyle = UIAlertViewStyleSecureTextInput;
+                [alertview show];
+            }
+                break;
+                // 以上的状态处理并没有写完全! 根据需要的状态进行处理即可.
+            default:
+            {
+                // ...
+            }
+                break;
+        }
         
     }];
     

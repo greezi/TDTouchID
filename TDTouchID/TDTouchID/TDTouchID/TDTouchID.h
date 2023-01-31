@@ -9,6 +9,15 @@
 
 #import <LocalAuthentication/LocalAuthentication.h>
 
+/****
+ ⚠️⚠️⚠️
+ 注意: 使用面容ID 要在 info.plist 中添加权限
+ 
+ <key>NSFaceIDUsageDescription</key>
+ <string>应用程序需要面容ID权限才能使用人脸识别进行身份验证</string>
+ 
+ */
+
 /**
  *  设备支持的生物验证方式
  */
@@ -90,25 +99,38 @@ typedef enum : NSUInteger {
 
 typedef void (^StateBlock)(TDTouchIDState state,NSError *error);
 
+/// 单例
 + (instancetype)sharedInstance;
 
-/**
- 启动生物验证
 
- @param desc Touch显示的描述
- @param block 回调状态的block
- */
+/// 是否显示日志信息
+@property (nonatomic, assign) BOOL disableLogs;
+
+/// 启动生物验证
+/// - Parameters:
+/// - desc: Touch显示的描述
+/// - block: 回调状态的block
 - (void)td_showTouchIDWithDescribe:(NSString *)desc BlockState:(StateBlock)block;
 
-/**
- 启动生物验证
- @param desc Touch显示的描述
- @param faceDesc FaceID状态下显示的描述
- @param block 回调状态的block
- */
+
+/// 启动生物验证
+///- Parameters:
+/// - desc: Touch显示的描述
+/// - faceDesc: FaceID状态下显示的描述
+/// - block: 回调状态的block
 - (void)td_showTouchIDWithDescribe:(NSString *)desc FaceIDDescribe:(NSString *)faceDesc BlockState:(StateBlock)block;
 
-// 判断设备支持哪种认证方式 TouchID & FaceID
+
+/// 启动生物验证
+///- Parameters:
+/// - desc: Touch显示的描述
+/// - faceDesc: FaceID状态下显示的描述
+/// - backTitle: 错误一次之后,会显示 backTitle 按钮, 如果不想显示 backTitle 按钮,可以设置 backTitle = @""
+/// - block: 回调状态的block
+- (void)td_showTouchIDWithDescribe:(NSString *)desc FaceIDDescribe:(NSString *)faceDesc AuthFallbackTitle:(NSString *)backTitle BlockState:(StateBlock)block;
+
+
+/// 判断设备支持的生物验证方式 (TouchID / FaceID / None)
 - (TDTouchIDSupperType)td_canSupperBiometrics;
 
 
