@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TDTouchID"
-  s.version      = "1.0.4"
+  s.version      = "1.0.7"
   s.summary      = "TouchID/FaceID for iOS."
 
   # This description is used to generate tags and improve search results.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/greezi/TDTouchID.git", :tag => "1.0.2" }
+  s.source       = { :git => "https://github.com/greezi/TDTouchID.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "TDTouchID", "TDTouchID/**/*.{h,m}"
+  s.source_files  = "TDTouchID", "TDTouchID/TDTouchID/TDTouchID/**/*.{h,m}"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
