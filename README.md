@@ -19,7 +19,7 @@ TDTouchID 是一个基于iOS平台的指纹、人脸验证库,可以用来做iOS
 * 使用Cocoa Pods安装
 
 ```
-pod 'TDTouchID', '~> 1.0.5'
+pod 'TDTouchID', '~> 1.0.7'
 
 ```
 
